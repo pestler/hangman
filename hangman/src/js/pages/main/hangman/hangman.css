@@ -1,0 +1,17 @@
+.head,
+.body,
+.hand-one,
+.hand-two,
+.leg-one,
+.leg-two {
+  display: none;
+}
+
+.head.active,
+.body.active,
+.hand-one.active,
+.hand-two.active,
+.leg-one.active,
+.leg-two.active {
+  display: block;
+}/*# sourceMappingURL=hangman.css.map */

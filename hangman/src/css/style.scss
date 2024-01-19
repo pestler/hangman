@@ -1,0 +1,230 @@
+body {
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.body {
+    position: absolute;
+    top: 100px;
+    left: 52px;
+}
+
+.box {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 15px;
+
+    @media screen and (max-width: 600px) {
+        padding: 5px;
+    }
+}
+
+
+.header {
+    margin: 0 auto;
+
+    h1 {
+        color: #2883ED;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .start-game {
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+.main,
+.hangman,
+.board,
+.letter,
+.hint,
+.correct {
+    display: flex;
+}
+
+.main {
+    padding: 10px;
+    // width: 85vw;
+    // height: 70vh;
+    border: solid 3px #2883ED;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 0 auto;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        padding: 1px;
+        gap: 10px;
+    }
+}
+
+.board {
+    margin-top: 20px;
+    //width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.keyboard {
+    padding: 10px;
+    user-select: none;
+    gap: 3px;
+    display: grid;
+    grid-template-columns: repeat(18, 35px);
+    grid-auto-rows: 20px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 600px) {
+        padding: 3px;
+        gap: 1px;
+        grid-template-columns: repeat(18, 20px);
+        grid-auto-rows: 15px;
+        margin-top: auto;
+    }
+
+    @media screen and (max-width: 400px) {
+        padding: 1px;
+        grid-template-columns: repeat(18, 15px);
+        margin-top: 10%;
+    }
+}
+
+.keyboard-key {
+    background: #165092;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.3);
+    grid-column: span 2;
+    grid-row: span 2;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.keyboard-key.active {
+    background: #3d838b;
+    transition: background 0.5s;
+    cursor: no-drop;
+}
+
+.hangman {
+    margin-top: 20px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangman-game {
+    text-align: center;
+    display: flex;
+}
+
+.hangman-pic {
+    position: relative;
+    width: 450px;
+    height: 700px;
+    display: flex;
+
+    @media screen and (max-width: 500px) {
+        width: 390px;
+        height: 600px;
+    }
+
+    @media screen and (max-width: 400px) {
+        width: 370px;
+        height: 580px;
+    }
+
+}
+
+.rect1,
+.rect2,
+.rect3,
+.rect4 {
+    border-radius: 5px;
+    border: 3px solid #FFFEFE;
+    background: #000;
+    position: absolute;
+}
+
+.rect1 {
+    width: 35px;
+    height: 561px;
+    top: 10px;
+    left: 20px;
+}
+
+.rect2 {
+    width: 35px;
+    height: 301px;
+    transform: rotate(90deg);
+    top: -110px;
+    left: 155px;
+}
+
+.rect3 {
+    width: 35px;
+    height: 183px;
+    transform: rotate(45deg);
+    top: 30px;
+    left: 85px;
+    z-index: -5;
+}
+
+.rect4 {
+    width: 10px;
+    height: 94px;
+    top: 50px;
+    left: 270px;
+}
+
+.man {
+    position: absolute;
+    top: 150px;
+    left: 220px;
+}
+
+.head {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hand-one {
+    position: absolute;
+    top: 95px;
+    left: -12px;
+}
+
+.hand-two {
+    position: absolute;
+    top: 95px;
+    left: 52px;
+}
+
+.leg-one {
+    position: absolute;
+    top: 230px;
+    left: -12px;
+}
+
+.leg-two {
+    position: absolute;
+    top: 230px;
+    left: 52px;
+}
